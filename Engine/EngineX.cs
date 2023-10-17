@@ -1,21 +1,23 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 
 namespace Table3d;
 
-public class EngineY : IEngine
+public class EngineX : IEngine
 {
+
     public int Speed { get; set; }
     
     public bool MoveAxis(string axis, Table table, List<Slider> sliders,  int multiplier, Rectangle rectangle)
     {
-        if (axis.Equals("Y"))
+        if (axis.Equals("X"))
         {
-            Slider ySlider = sliders[1];
-            Speed = (int)ySlider.Value * multiplier;
-            table.PositionY += Speed;
-            Canvas.SetTop(rectangle, table.PositionY);
+            Slider xSlider = sliders.First(slider => slider.Name.Equals("XSlider"));
+            Speed = (int)xSlider.Value * multiplier;
+            table.PositionX += Speed;
+            Canvas.SetLeft(rectangle, table.PositionX);
             return true;
         }
         return false;

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-         <Button Content="Move X Axis" Click="MoveAxisClick" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="60, 80, 0, 0"/>
+        <Button Content="Move X Axis" Click="MoveAxisClick" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="60, 80, 0, 0"/>
         <Button Content="Move Y Axis" Click="MoveAxisClick" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="60, 130, 0, 0"/>
         <Button Content="Move Z Axis" Click="MoveAxisClick" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="60, 180, 0, 0"/>
 
@@ -21,9 +21,9 @@
         <Label Name="LabelYRange" Content="Y Range: 0-100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20, 260, 0, 0" />
         <Label Name="LabelZRange" Content="Z Range: 0-100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20, 290, 0, 0" />
         
-        <Slider Name="XSpeedSlider" Minimum="1" Maximum="10" Value="5" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 105, 0, 0" />
-        <Slider Name="YSpeedSlider" Minimum="1" Maximum="10" Value="5" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 155, 0, 0" />
-        <Slider Name="ZSpeedSlider" Minimum="1" Maximum="10" Value="5" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 205, 0, 0" />
+        <Slider Name="XSlider" Minimum="1" Maximum="10" Value="5" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 105, 0, 0" />
+        <Slider Name="YSlider" Minimum="1" Maximum="10" Value="5" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 155, 0, 0" />
+        <Slider Name="ZSlider" Minimum="1" Maximum="10" Value="5" Width="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20, 205, 0, 0" />
         
         <Canvas Name="TableCanvas" Width="400" Height="400" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="100, 60, 0, 0">
             <Rectangle Name="TableRectangle" Width="400" Height="200" Fill="Blue" />

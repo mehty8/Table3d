@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 
@@ -12,7 +13,7 @@ public class EngineZ : IEngine
     {
         if (axis.Equals("Z"))
         {
-            Slider zSlider = sliders[2];
+            Slider zSlider = sliders.First(slider => slider.Name.Equals("ZSlider"));
             Speed = (int)zSlider.Value * multiplier;
             table.PositionZ += Speed;
             Canvas.SetLeft(rectangle, table.PositionZ);
